@@ -41,4 +41,13 @@ function include_elementor_addon() {
 }
 add_action('after_setup_theme', 'include_elementor_addon');
 
+// Include style.css file
+function include_elementor_addon_style() {
+  
+    
+    wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+}
+add_action('wp_enqueue_scripts', 'include_elementor_addon_style');
+
 

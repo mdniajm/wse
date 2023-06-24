@@ -6,3 +6,99 @@ Author URI: https://mdniajmakhdum.me/
 Description: Twenty Twenty-One Child Theme With Basic Elementor Widgets.
 Version: 1.0.0
 */
+
+
+
+
+.team-item-two {
+	position: relative;
+	margin-bottom: 30px;
+}
+.team-thumb-two {
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px 80px 5px 5px;
+}
+.team-thumb-two::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	opacity: 0;
+	transition: .3s linear;
+	pointer-events: none;
+}
+.team-item-two:hover .team-thumb-two::before {
+	opacity: 1;
+	width: 100%;
+}
+.team-social-two .list-wrap {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: -30px;
+	top: 20px;
+	gap: 7px;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateX(-100px);
+	transition: .3s;
+}
+.team-item-two:hover .team-social-two .list-wrap {
+	opacity: 1;
+	visibility: visible;
+	transform: translateX(0);
+}
+.team-social-two .list-wrap a {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-size: 14px;
+	background: white;
+    color: black;
+}
+.team-social-two .list-wrap a:hover {
+	color: #FE5D14;
+}
+.team-content-two {
+	width: 270px;
+	box-shadow: 0px 4px 46px rgba(0, 0, 0, 0.18);
+	border-radius: 4px;
+	text-align: center;
+	padding: 26px 20px;
+	position: relative;
+	z-index: 2;
+	margin-top: -52px;
+	transition: .3s linear;
+	background: white;
+}
+.team-item-two:hover .team-content-two {
+	background: #fe5d14
+}
+.team-content-two .title {
+	font-weight: 600;
+	font-size: 20px;
+	margin-bottom: 12px;
+}
+.team-content-two .title a:hover {
+	color: var(--tg-white);
+}
+.team-content-two span {
+	display: block;
+	color: #636363;
+	line-height: 1;
+	transition: .3s linear;
+}
+.team-item-two:hover .team-content-two span,
+.team-item-two:hover .team-content-two .title {
+	color: white;
+}
+ul li{
+    list-style: none;
+}
